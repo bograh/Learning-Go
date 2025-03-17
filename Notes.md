@@ -114,6 +114,39 @@ package main
 import "fmt"
 
 func main() {
+	// Arrays (are fixed size)
+	var ages [3]int = [3]int{13, 23, 37}
+	var ages2 = [3]int{20, 25, 30}
+
+	fmt.Println(ages)
+	fmt.Println(len(ages))
+
+	names := [3]string{"Tim", "John", "Joe"}
+	names[1] = "Jane"
+
+	fmt.Println(names)
+	fmt.Println(len(names))
+
+	// Slices (use arrays under the hood)
+	// Slices are not fixed size
+	var scores = []int{100, 50, 70}
+	scores[0] = 17
+	append(scores, 85) // returns new slice rather than change slice
+	scores = append(scores, 75) // replaces original slice
+
+	fmt.Println(scores, len(scores))
+
+	// slice ranges
+	rangeOne := names[1:3]
+	rangeTwo := names[2:]
+	rangeThree := names[:3]
+
+	fmt.Println(rangeOne)
+	fmt.Println(rangeTwo)
+	fmt.Println(rangeThree)
+
+	rangeOne = append(rangeOne, "Max")
+	fmt.Println(rangeOne)
 }
 
 ```
