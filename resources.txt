@@ -1,1 +1,2 @@
 Go Web Examples - https://gowebexamples.com/
+Go By Examples - https://gobyexample.com/
